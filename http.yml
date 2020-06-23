@@ -34,7 +34,4 @@ spec:
         persistentVolumeClaim:
           claimName: web-pvc
 
-      volumes:
-      - name: logs-vol
-        persistentVolumeClaim:
-          claimName: log-pvc
+    
