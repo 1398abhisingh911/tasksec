@@ -16,21 +16,17 @@ spec:
     spec:
       containers:
       - name: http
-        image: 1398abhisingh911/kubejen:v1
+        image: httpd:latest
 
         ports:
         - containerPort: 80
 
         volumeMounts:
           - name: http-vol
-            mountPath: /var/www/html/
-
-        volumeMounts:
-          - name: logs-vol
-            mountPath: /var/log/httpd/
+            mountPath: /usr/local/apache1/htdocs
 
       volumes:
-      - name: httpd-vol
+      - name: http-vol
         persistentVolumeClaim:
           claimName: web-pvc
 
